@@ -1,0 +1,47 @@
+Robot
+<table class="table table-striped table-hover table-bordered">
+
+    <tr>
+        <td>Braço Esquerdo - Cotovelo</td>
+        <td> {{ getElbowName(robo.Arms.LeftElbow)}} </td>
+        <td> <button (click)="moveElbow(true,robo.Arms.LeftElbow+1)">+</button>
+            <button (click)="moveElbow(true,robo.Arms.LeftElbow-1)">-</button>
+        </td>
+    </tr>
+    <tr>
+        <td>Braço Direito - Cotovelo</td>
+        <td> {{ getElbowName(robo.Arms.RightElbow)}} </td>
+        <td> <button (click)="moveElbow(false,robo.Arms.RightElbow+1)">+</button>
+            <button (click)="moveElbow(false,robo.Arms.RightElbow-1)">-</button>
+        </td>
+    </tr>
+    <tr>
+        <td>Braço Esquerdo - Pulso</td>
+        <td> {{ getFistName(robo.Arms.LeftFist)}} </td>
+        <td> <button (click)="moveFist(true,robo.Arms.LeftFist+1)">+</button>
+            <button (click)="moveFist(true,robo.Arms.LeftFist-1)">-</button>
+        </td>
+    </tr>
+    <tr>
+        <td>Braço Direito - Pulso</td>
+        <td> {{getFistName(robo.Arms.RightFist)}} </td>
+        <td> <button (click)="moveFist(false,robo.Arms.RightFist+1)">+</button>
+            <button (click)="moveFist(false,robo.Arms.RightFist-1)">-</button>
+        </td>
+    </tr>
+    <tr>
+        <td>Cabeça - Inclinação</td>
+        <td> {{getTiltName(robo.Head.Tilt)}} </td>
+        <td> <button (click)="moveTilt(robo.Head.Tilt+1)">+</button>
+            <button (click)="moveTilt(robo.Head.Tilt-1)">-</button>
+        </td>
+    </tr>
+    <tr>
+        <td>Cabeça - Rotação</td>
+        <td> {{getRotationName(robo.Head.Rotation)}} </td>
+        <td> <button (click)="moveRotation(robo.Head.Rotation+1)">+</button>
+            <button (click)="moveRotation(robo.Head.Rotation-1)">-</button>
+        </td>
+    </tr>
+
+</table>
